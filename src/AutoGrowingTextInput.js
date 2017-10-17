@@ -104,10 +104,10 @@ export default class AutoGrowingTextInput extends Component {
    using a flag (androidFirstContentSizeChange) to pervent multiple updates in case both notifications works simultaniously in some cases
    */
   _onContentSizeChangeAndroid(event) {
-    if(this.state.androidFirstContentSizeChange) {
+    //if(this.state.androidFirstContentSizeChange) {
       this.setState({androidFirstContentSizeChange: false});
       this._handleNativeEvent(event.nativeEvent);
-    }
+    //}
     if (this.props.onContentSizeChange) {
       this.props.onContentSizeChange(event);
     }
